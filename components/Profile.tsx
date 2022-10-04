@@ -12,7 +12,7 @@ function Profile({}: Props) {
       transition={{ duration: 1 }}
     >
       <img src="/boredape1.jpg" className="rounded-full h-32 w-32" />
-      <p className="text-lg md:text-5xl">Artist Name</p>
+      <p className="text-lg md:text-5xl p-5">Artist Name</p>
     </motion.div>
   );
 }
