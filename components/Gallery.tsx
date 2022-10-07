@@ -20,7 +20,7 @@ function Gallery({}: Props) {
 
   return (
     <>
-      <div className="hidden sm:block justify-center items-center">
+      <div className="hidden sm:block justify-center items-center pb-12">
         <div className="flex flex-row flex-wrap max-w-3xl justify-center cursor:pointer gap-3">
           {artworks.map((file, delay = 2) => {
             delay++;
@@ -43,10 +43,16 @@ function Gallery({}: Props) {
 
       {openModal && (
         <>
-          
-          <div className="h-fit w-fit absolute">
-          <div className="cursor-pointer" onClick={() => setOpenModal(false)}> <FaRegWindowClose/> </div>
-            <img className="rounded" src={modalImg}></img>
+          <div className="h-full w-full absolute backdrop-blur-sm flex flex-col justify-center items-center">
+            <div className="w-fit h-fit">
+              <div
+                className="cursor-pointer flex self-start "
+                onClick={() => setOpenModal(false)}
+              >
+                <FaRegWindowClose />
+              </div>
+              <img className="rounded" src={modalImg}></img>
+            </div>
           </div>
         </>
       )}
